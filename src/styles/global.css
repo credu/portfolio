@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
 @import "tailwindcss";
 
 @plugin "@tailwindcss/typography";

@@ -1,0 +1,23 @@
+---
+import { BACKEND, FRONTEND, OTHERS } from "../../constants/stacks";
+import StackCard from "./StackCard.astro";
+import StackCardContainer from "./StackCardContainer.astro";
+---
+
+<section class="container mx-auto">
+    <h2 class="font-bold py-2 text-4xl text-center text-white tracking-wider">
+        Stacks
+    </h2>
+
+    <StackCardContainer title="Frontend">
+        {FRONTEND.map((stack) => <StackCard {...stack} />)}
+    </StackCardContainer>
+
+    <StackCardContainer title="Backend">
+        {BACKEND.map((stack) => <StackCard {...stack} />)}
+    </StackCardContainer>
+
+    <StackCardContainer title="Others">
+        {OTHERS.map((stack) => <StackCard {...stack} />)}
+    </StackCardContainer>
+</section>

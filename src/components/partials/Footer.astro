@@ -1,13 +1,17 @@
+---
+import TraslucentContainer from "../others/TraslucentContainer.astro";
+---
+
 <footer class="py-2 mt-2">
-    <div
-        class="container mx-auto text-center bg-[rgba(17,25,40,0.75)] border border-[#rgba(255,255,255,0.125)] backdrop:blur-[16px] backdrop:saturate-[180%] rounded-[12px] py-4"
-    >
-        <blockquote class="inline-block">
-            <p class="prose prose-invert max-w-none">
-                Science is what we understand well enough to explain to a
-                computer. Art is everything else we do.
-                <span>— Donald Knuth</span>
-            </p>
-        </blockquote>
+    <div class="container mx-auto text-center">
+        <TraslucentContainer>
+            <blockquote class="inline-block px-2 py-4">
+                <p class="prose prose-invert max-w-none">
+                    Science is what we understand well enough to explain to a
+                    computer. Art is everything else we do.
+                    <span>— Donald Knuth</span>
+                </p>
+            </blockquote>
+        </TraslucentContainer>
     </div>
 </footer>
