@@ -1,0 +1,39 @@
+---
+import { SOCIAL_NETWORKS } from "../../constants/social-networks";
+import LinkButton from "../buttons/LinkButton.astro";
+---
+
+<header class="text-white py-10">
+    <div class="container mx-auto px-2 space-y-3">
+        <div>
+            <h1 class="text-5xl font-bold">
+                Hey, I'm <span class="text-sky-500">Jesus Mendoza</span>
+            </h1>
+            <h2 class="text-2xl">Fullstack Developer</h2>
+        </div>
+
+        <p class="prose prose-xl prose-invert max-w-none">
+            I am a self-taught developer dedicated to programming and
+            technology. Currently, I am expanding my knowledge at the University
+            of Guayaquil and Digital House focusing my learning on software
+            development. I am constantly looking for new opportunities to learn
+            and improve my skills, ready to apply them in new projects. In my
+            free time, I enjoy learning new technologies, I have great long term
+            goals and I am committed to work hard to achieve my professional
+            goals.
+        </p>
+
+        <div class="space-x-5">
+            {
+                SOCIAL_NETWORKS.map(({ href, icon, name }) => (
+                    <LinkButton
+                        href={href}
+                        label={name}
+                        icon={icon}
+                        external={true}
+                    />
+                ))
+            }
+        </div>
+    </div>
+</header>
