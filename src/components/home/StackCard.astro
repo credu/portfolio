@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import TraslucentContainer from "../others/TraslucentContainer.astro";
 
 interface Props {
@@ -11,7 +12,14 @@ const { name, image } = Astro.props;
 
 <TraslucentContainer>
     <div class="flex flex-col items-center justify-center space-y-3 py-4">
-        <img class="size-16 object-contain" src={image} alt={name} />
+        <Image
+            class="size-16 object-contain"
+            src={image}
+            alt={name}
+            width={64}
+            height={64}
+            loading="lazy"
+        />
         <span class="font-extralight text-white tracking-wide">{name}</span>
     </div>
 </TraslucentContainer>
