@@ -82,7 +82,7 @@ export const PROJECTS: Project[] = [
     },
     {
         title: "React Gift Expert",
-        description: "A react app that serves gifts consuming Gilphy app developed on React course with some modifications of mine.",
+        description: "A react app that serves gifts consuming Gilphy app developed on React Devtalles's course with some modifications.",
         image: ReactGiftExpert,
         tags: ["ReactJS", "JavaScript", "CSS"],
         links: [
