@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets";
+import { ICONS } from "../../constants/icons";
+
+interface Props {
+    name: string;
+}
+
+const { name } = Astro.props;
+const icon = ICONS[name.toLowerCase().replace(" ", "")];
+---
+
+<div class="border-1 border-white rounded-sm px-2 py-1 inline-block space-x-1">
+    <Image
+        class="inline-block size-6 object-contain"
+        src={icon}
+        alt={name}
+        height="24"
+        width="24"
+    />
+    <span class="font-medium inline-block text-white text-xs">{name}</span>
+</div>

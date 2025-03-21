@@ -1,0 +1,25 @@
+---
+import { PROJECTS } from "../../constants/projects";
+import ProjectCard from "./ProjectCard.astro";
+import ProjectContainer from "./ProjectContainer.astro";
+---
+
+<section class="container mx-auto px-2 py-10" id="projects">
+    <h2 class="font-bold pb-10 text-4xl text-center text-white tracking-wider">
+        Projects
+    </h2>
+
+    <ProjectContainer>
+        {
+            PROJECTS.map((project) => (
+                <ProjectCard
+                    title={project.title}
+                    description={project.description}
+                    image={project.image}
+                    tags={project.tags}
+                    links={project.links}
+                />
+            ))
+        }
+    </ProjectContainer>
+</section>

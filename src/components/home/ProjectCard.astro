@@ -1,0 +1,41 @@
+---
+import { Image } from "astro:assets";
+import TraslucentContainer from "../others/TraslucentContainer.astro";
+import ProjectLink from "./ProjectLink.astro";
+import { type ProjectLinks, type Project } from "../../types/Project";
+import { type Technologies } from "../../types/Technology";
+import ProjectTag from "./ProjectTag.astro";
+
+interface Props {
+    title: string;
+    description: string;
+    image: ImageMetadata;
+    tags: Technologies[];
+    links: ProjectLinks[];
+}
+
+const { title, description, image, tags, links }: Project = Astro.props;
+---
+
+<TraslucentContainer>
+    <div class="flex flex-col h-full items-stretch justify-start space-y-3 p-4">
+        <Image
+            class="w-full object-contain aspect-video"
+            src={image}
+            alt={title}
+            loading="lazy"
+        />
+        <span class="font-extralight text-white tracking-wide">{title}</span>
+        <p class="prose prose-invert">{description}</p>
+        <div class="mt-auto gap-3 flex flex-wrap">
+            {tags.map((tag) => <ProjectTag name={tag} />)}
+        </div>
+        <div class="space-x-3 text-right">
+            {
+                links.map((link) => (
+                    <ProjectLink type={link.type} href={link.href} />
+                ))
+            }
+        </div>
+    </div>
+</TraslucentContainer>

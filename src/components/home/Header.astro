@@ -3,38 +3,34 @@ import { SOCIAL_NETWORKS } from "../../constants/social-networks";
 import LinkButton from "../buttons/LinkButton.astro";
 ---
 
-<header class="text-white py-10">
-    <div class="container mx-auto px-2 space-y-3">
-        <div>
-            <h1 class="text-5xl font-bold">
-                Hey, I'm <span class="text-sky-500">Jesus Mendoza</span>
-            </h1>
-            <h2 class="text-2xl">Fullstack Developer</h2>
-        </div>
+<header class="container mx-auto px-2 py-10 space-y-3 text-white">
+    <h1 class="text-5xl font-bold">
+        Hey, I'm <span class="text-sky-500">Jesus Mendoza</span>
+    </h1>
 
-        <p class="prose prose-xl prose-invert max-w-[70ch]">
-            I'm a <b>FullStack Developer</b> with experience in different technologies,
-            focused on developing efficient and scalable solutions. I'm currently
-            studying Data Science at the University of Guayaquil and I'm finishing
-            the
-            <b>"Certified Tech Developer"</b>certification at
-            <b>Digital House</b>. I have experience in backend development with
-            Express, Laravel, and Spring Boot, SQL and NoSQL databases, frontend
-            development with React, and infrastructure implementation with
-            Docker.
-        </p>
+    <h2 class="font-bold text-2xl text-sky-200">Fullstack Developer</h2>
 
-        <div class="space-x-5">
-            {
-                SOCIAL_NETWORKS.map(({ href, icon, name }) => (
-                    <LinkButton
-                        href={href}
-                        label={name}
-                        icon={icon}
-                        external={true}
-                    />
-                ))
-            }
-        </div>
+    <p class="prose prose-xl prose-invert max-w-[70ch]">
+        I'm a <b>FullStack Developer</b> with experience in different technologies,
+        focused on developing efficient and scalable solutions. I'm currently studying
+        Data Science at the University of Guayaquil and I'm finishing the
+        <b>"Certified Tech Developer"</b> certification at
+        <b>Digital House</b>. I have experience in backend development with
+        Express, Laravel, and Spring Boot, SQL and NoSQL databases, frontend
+        development with React, and infrastructure implementation with Docker.
+    </p>
+
+    <div class="space-x-5">
+        {
+            SOCIAL_NETWORKS.map(({ href, icon, name }) => (
+                <LinkButton
+                    href={href}
+                    label={name}
+                    icon={icon}
+                    iconLoading="eager"
+                    external={true}
+                />
+            ))
+        }
     </div>
 </header>

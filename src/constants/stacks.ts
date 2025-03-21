@@ -1,82 +1,83 @@
 import { type Technology } from "../types/Technology";
+import { ICONS } from "./icons";
 
 export const FRONTEND: Technology[] = [
     {
         name: "HTML",
-        image: "https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg"
+        image: ICONS.html
     },
     {
         name: "CSS",
-        image: "https://www.vectorlogo.zone/logos/w3_css/w3_css-icon~old.svg"
+        image: ICONS.css
     },
     {
         name: "JavaScript",
-        image: "https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg"
+        image: ICONS.javascript
     },
     {
         name: "Astro",
-        image: "https://raw.githubusercontent.com/pheralb/svgl/main/static/library/astro_dark.svg"
+        image: ICONS.astro
     },
     {
         name: "ReactJS",
-        image: "https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg"
+        image: ICONS.reactjs
     },
     {
         name: "TailwindCSS",
-        image: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
+        image: ICONS.tailwindcss
     }
 ];
 
 export const BACKEND: Technology[] = [
     {
         name: "Java",
-        image: "https://www.vectorlogo.zone/logos/java/java-icon.svg"
+        image: ICONS.java
     },
     {
         name: "Spring Boot",
-        image: "https://www.vectorlogo.zone/logos/springio/springio-icon.svg"
+        image: ICONS.springboot
     },
     {
         name: "NodeJS",
-        image: "https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg"
+        image: ICONS.nodejs
     },
     {
         name: "MySQL",
-        image: "https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg"
+        image: ICONS.mysql
     },
     {
         name: "PostgreSQL",
-        image: "https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg"
+        image: ICONS.postgresql
     },
     {
         name: "MongoDB",
-        image: "https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg"
+        image: ICONS.mongodb
     }
 ];
 
 export const OTHERS: Technology[] = [
     {
         name: "Linux",
-        image: "https://www.vectorlogo.zone/logos/linux/linux-icon.svg"
+        image: ICONS.linux
     },
     {
         name: "Git",
-        image: "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
+        image: ICONS.git
     },
     {
         name: "TypeScript",
-        image: "https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg"
+        image: ICONS.typescript
     },
     {
         name: "Jest",
-        image: "https://www.vectorlogo.zone/logos/jestjsio/jestjsio-icon.svg"
+        image: ICONS.jest
     },
     {
         name: "Docker",
-        image: "https://www.vectorlogo.zone/logos/docker/docker-icon.svg"
+        image: ICONS.docker
     },
     {
         name: "Postman",
-        image: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
+        image: ICONS.postman
     }
 ];
