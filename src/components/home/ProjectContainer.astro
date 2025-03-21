@@ -1,3 +1,11 @@
-<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+---
+import { type HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"div"> {}
+
+const props = Astro.props;
+---
+
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4" {...props}>
     <slot />
 </div>

@@ -2,6 +2,7 @@
 import { PROJECTS } from "../../constants/projects";
 import ProjectCard from "./ProjectCard.astro";
 import ProjectContainer from "./ProjectContainer.astro";
+import "photoswipe/style.css";
 ---
 
 <section class="container mx-auto px-2 py-10" id="projects">
@@ -9,7 +10,7 @@ import ProjectContainer from "./ProjectContainer.astro";
         Projects
     </h2>
 
-    <ProjectContainer>
+    <ProjectContainer id="gallery">
         {
             PROJECTS.map((project) => (
                 <ProjectCard
@@ -23,3 +24,15 @@ import ProjectContainer from "./ProjectContainer.astro";
         }
     </ProjectContainer>
 </section>
+
+<script>
+    import PhotoSwipeLightbox from "photoswipe/lightbox";
+
+    const lightbox = new PhotoSwipeLightbox({
+        gallery: "#gallery",
+        children: "a[data-pswp-width][data-pswp-height]",
+        pswpModule: () => import("photoswipe"),
+    });
+
+    lightbox.init();
+</script>
