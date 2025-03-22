@@ -12,7 +12,7 @@ export const PROJECTS: Project[] = [
         title: "Carato",
         description: "The Digital House side project with 8 classmates about a booking system like Airbnb for cars.",
         image: Carato,
-        tags: ["JavaScript", "ReactJS", "Java", "Spring Boot", "MySQL", "Docker"],
+        tags: ["Java", "Spring Boot", "JavaScript", "ReactJS", "MySQL", "Docker"],
         links: [
             {
                 type: "github",
