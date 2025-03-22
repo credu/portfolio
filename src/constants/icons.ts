@@ -1,4 +1,5 @@
 import AnchorIcon from "@/assets/svg/anchor.svg";
+import documentIcon from "@/assets/svg/document.svg";
 import GithubIcon from "@/assets/svg/github.svg";
 import GitlabIcon from "@/assets/svg/gitlab.svg";
 import LinkedinIcon from "@/assets/svg/linkedin.svg";
@@ -10,6 +11,7 @@ export const LOCAL_ICONS: Record<string, ImageMetadata> = {
     github: GithubIcon,
     gitlab: GitlabIcon,
     linkedin: LinkedinIcon,
+    document: documentIcon,
 };
 
 export const ICONS: Record<string, string> = {

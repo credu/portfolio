@@ -13,7 +13,7 @@ const { href, label, icon, iconLoading, external } = Astro.props;
 ---
 
 <a
-    class="inline-block border-2 border-white px-2 py-1 hover:border-sky-500 transition-colors"
+    class="inline-block border-2 border-white px-2 py-1 rounded-sm hover:border-sky-500 transition-colors"
     href={href}
     {...external && { target: "_blank", rel: "noopener noreferrer" }}
 >
