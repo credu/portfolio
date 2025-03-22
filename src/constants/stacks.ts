@@ -1,4 +1,4 @@
-import { type Technology } from "../types/Technology";
+import { type Technology } from "@/types/Technology";
 import { ICONS } from "./icons";
 
 export const FRONTEND: Technology[] = [

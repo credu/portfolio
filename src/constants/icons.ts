@@ -1,8 +1,8 @@
-import AnchorIcon from "../assets/svg/anchor.svg";
-import GithubIcon from "../assets/svg/github.svg";
-import GitlabIcon from "../assets/svg/gitlab.svg";
-import LinkedinIcon from "../assets/svg/linkedin.svg";
-import windowIcon from "../assets/svg/window.svg";
+import AnchorIcon from "@/assets/svg/anchor.svg";
+import GithubIcon from "@/assets/svg/github.svg";
+import GitlabIcon from "@/assets/svg/gitlab.svg";
+import LinkedinIcon from "@/assets/svg/linkedin.svg";
+import windowIcon from "@/assets/svg/window.svg";
 
 export const LOCAL_ICONS: Record<string, ImageMetadata> = {
     anchor: AnchorIcon,

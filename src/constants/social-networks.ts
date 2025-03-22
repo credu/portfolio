@@ -1,4 +1,4 @@
-import type { SocialNetwork } from "../types/SocialNetwork";
+import { type SocialNetwork } from "@/types/SocialNetwork";
 import { LOCAL_ICONS } from './icons';
 
 export const SOCIAL_NETWORKS: SocialNetwork[] = [

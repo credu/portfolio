@@ -1,20 +1,15 @@
 ---
 import { Image } from "astro:assets";
-import TraslucentContainer from "../containers/TraslucentContainer.astro";
+
+import { type Project } from "@/types/Project";
+
 import ProjectLink from "./ProjectLink.astro";
-import { type ProjectLinks, type Project } from "../../types/Project";
-import { type Technologies } from "../../types/Technology";
 import ProjectTag from "./ProjectTag.astro";
+import TraslucentContainer from "../containers/TraslucentContainer.astro";
 
-interface Props {
-    title: string;
-    description: string;
-    image: ImageMetadata;
-    tags: Technologies[];
-    links: ProjectLinks[];
-}
+interface Props extends Project {}
 
-const { title, description, image, tags, links }: Project = Astro.props;
+const { title, description, image, tags, links } = Astro.props;
 ---
 
 <TraslucentContainer>
