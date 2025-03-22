@@ -5,25 +5,19 @@ import ProjectContainer from "./ProjectContainer.astro";
 import "photoswipe/style.css";
 ---
 
-<section class="container mx-auto px-2 py-10" id="projects">
-    <h2 class="font-bold pb-10 text-4xl text-center text-white tracking-wider">
-        Projects
-    </h2>
-
-    <ProjectContainer id="gallery">
-        {
-            PROJECTS.map((project) => (
-                <ProjectCard
-                    title={project.title}
-                    description={project.description}
-                    image={project.image}
-                    tags={project.tags}
-                    links={project.links}
-                />
-            ))
-        }
-    </ProjectContainer>
-</section>
+<ProjectContainer id="gallery">
+    {
+        PROJECTS.map((project) => (
+            <ProjectCard
+                title={project.title}
+                description={project.description}
+                image={project.image}
+                tags={project.tags}
+                links={project.links}
+            />
+        ))
+    }
+</ProjectContainer>
 
 <script>
     import PhotoSwipeLightbox from "photoswipe/lightbox";

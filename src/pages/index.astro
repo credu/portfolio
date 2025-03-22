@@ -1,8 +1,26 @@
 ---
-import Home from "../components/Home.astro";
+import SectionContainer from "../components/containers/SectionContainer.astro";
+import Header from "../components/home/Header.astro";
+import Projects from "../components/home/Projects.astro";
+import Stacks from "../components/home/Stacks.astro";
+import TitleSection from "../components/titles/TitleSection.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Portfolio | Jesus Mendoza">
-    <Home />
+    <main class="px-4 space-y-15">
+        <SectionContainer className="pt-10">
+            <Header />
+        </SectionContainer>
+
+        <SectionContainer id="projects">
+            <TitleSection name="Projects" />
+            <Projects />
+        </SectionContainer>
+
+        <SectionContainer id="stacks">
+            <TitleSection name="Stacks" />
+            <Stacks />
+        </SectionContainer>
+    </main>
 </Layout>

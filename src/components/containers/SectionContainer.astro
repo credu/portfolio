@@ -1,0 +1,11 @@
+---
+interface Props {
+    id?: string;
+    className?: string;
+}
+const { className, id } = Astro.props;
+---
+
+<section id={id} class={`container mx-auto ${className ?? ""}`}>
+    <slot />
+</section>
