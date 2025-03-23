@@ -37,11 +37,11 @@ const navigationLinks: NavigationLinks[] = [
 ---
 
 <header
-    class="container fixed flex items-center justify-center mt-3 mx-auto text-white w-full top-0 left-0 right-0 z-10"
+    class="container fixed flex items-center justify-center mt-3 mx-auto text-white w-full top-0 left-0 right-0 z-10 px-4"
 >
-    <TraslucentContainer>
+    <TraslucentContainer class="overflow-x-auto scroll-smooth touch-pan-x">
         <nav class="flex flex-row justify-between">
-            <ul>
+            <ul class="flex flex-nowrap text-nowrap">
                 {
                     navigationLinks.map(({ title, href, label }) => (
                         <li class="inline-block">
