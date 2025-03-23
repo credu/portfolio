@@ -1,4 +1,6 @@
 ---
+import Education from "@/components/home/Education.astro";
+import Experience from "@/components/home/Experience.astro";
 import Hero from "@/components/home/Hero.astro";
 import Layout from "@/layouts/Layout.astro";
 import Projects from "@/components/home/Projects.astro";
@@ -16,6 +18,16 @@ import TitleSection from "@/components/titles/TitleSection.astro";
         <SectionContainer id="projects">
             <TitleSection name="Projects" />
             <Projects />
+        </SectionContainer>
+
+        <SectionContainer id="experience">
+            <TitleSection name="Experience" />
+            <Experience />
+        </SectionContainer>
+
+        <SectionContainer id="education">
+            <TitleSection name="Education" />
+            <Education />
         </SectionContainer>
 
         <SectionContainer id="stacks">

@@ -1,0 +1,14 @@
+---
+import { type TimelineInterface } from "@/types/Timeline";
+import TimelineItem from "./TimelineItem.astro";
+
+interface Props {
+    data: TimelineInterface[];
+}
+
+const { data } = Astro.props;
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+    {data.map((timeline) => <TimelineItem {...timeline} />)}
+</ol>
