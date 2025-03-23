@@ -2,29 +2,35 @@
 import TraslucentContainer from "../containers/TraslucentContainer.astro";
 
 interface NavigationLinks {
-    label: string;
+    title: string;
+    label?: string;
     href: string;
 }
 
 const navigationLinks: NavigationLinks[] = [
     {
-        label: "Home",
+        title: "Home",
+        label: "home",
         href: "/#",
     },
     {
-        label: "Projects",
+        title: "Projects",
+        label: "projects",
         href: "/#projects",
     },
     {
-        label: "Experience",
+        title: "Experience",
+        label: "experience",
         href: "/#experience",
     },
     {
-        label: "Stacks",
+        title: "Stacks",
+        label: "stacks",
         href: "/#stacks",
     },
     {
-        label: "About Me",
+        title: "About Me",
+        label: "about-me",
         href: "/#about-me",
     },
 ];
@@ -37,13 +43,14 @@ const navigationLinks: NavigationLinks[] = [
         <nav class="flex flex-row justify-between">
             <ul>
                 {
-                    navigationLinks.map(({ href, label }) => (
+                    navigationLinks.map(({ title, href, label }) => (
                         <li class="inline-block">
                             <a
                                 class="inline-block px-2 py-1 transition-colors duration-300 hover:text-sky-500"
+                                aria-label={label}
                                 href={href}
                             >
-                                {label}
+                                {title}
                             </a>
                         </li>
                     ))
@@ -52,3 +59,45 @@ const navigationLinks: NavigationLinks[] = [
         </nav>
     </TraslucentContainer>
 </header>
+
+<script>
+    const navItems = document.querySelectorAll("nav>ul>li>a");
+    const observerOptions: IntersectionObserverInit = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.7,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            const { isIntersecting } = entry;
+
+            if (isIntersecting) {
+                navItems.forEach((item) => {
+                    const label = item.getAttribute("aria-label");
+                    if (label === entry.target.id) {
+                        item.classList.add("text-sky-500");
+                    } else {
+                        item.classList.remove("text-sky-500");
+                    }
+                });
+            }
+        });
+    }, observerOptions);
+
+    const sections = document.querySelectorAll("section[id]");
+    sections.forEach((section) => {
+        observer.observe(section);
+    });
+
+    // Cleanup function
+    document.onvisibilitychange = () => {
+        if (document.visibilityState === "hidden") {
+            observer.disconnect();
+        } else {
+            sections.forEach((section) => {
+                observer.observe(section);
+            });
+        }
+    };
+</script>
