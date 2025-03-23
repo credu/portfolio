@@ -7,6 +7,7 @@ import Projects from "@/components/home/Projects.astro";
 import SectionContainer from "@/components/containers/SectionContainer.astro";
 import Stacks from "@/components/home/Stacks.astro";
 import TitleSection from "@/components/titles/TitleSection.astro";
+import AboutMe from "@/components/home/AboutMe.astro";
 ---
 
 <Layout title="Portfolio | Jesus Mendoza">
@@ -33,6 +34,11 @@ import TitleSection from "@/components/titles/TitleSection.astro";
         <SectionContainer id="stacks">
             <TitleSection name="Stacks" />
             <Stacks />
+        </SectionContainer>
+
+        <SectionContainer id="about-me">
+            <TitleSection name="About Me" />
+            <AboutMe />
         </SectionContainer>
     </main>
 </Layout>
