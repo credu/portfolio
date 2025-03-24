@@ -16,7 +16,8 @@ export const FRONTEND: Technology[] = [
     },
     {
         name: "Astro",
-        image: ICONS.astro
+        image: ICONS.astro,
+        darkImage: ICONS.astro_dark
     },
     {
         name: "ReactJS",

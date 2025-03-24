@@ -3,4 +3,5 @@ export type Technologies = "HTML" | "CSS" | "JavaScript" | "Astro" | "ReactJS" |
 export interface Technology {
     name: Technologies
     image: string
+    darkImage?: string
 }
