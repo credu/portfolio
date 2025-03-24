@@ -1,11 +1,11 @@
 import { type Project } from "@/types/Project";
 
-import Carato from "@/assets/img/carato.png";
-import DrJISmile from "@/assets/img/drjismile.png";
-import ICantFuckingDecideBetween from "@/assets/img/i-cant-fucking-decide-between.png";
-import KertinFate from "@/assets/img/kertin-fate.png";
-import ReactGiftExpert from "@/assets/img/react-gift-expert.png";
-import UrlShortener from "@/assets/img/url-shortener.png";
+import Carato from "@/assets/img/carato.webp";
+import DrJISmile from "@/assets/img/drjismile.webp";
+import ICantFuckingDecideBetween from "@/assets/img/i-cant-fucking-decide-between.webp";
+import KertinFate from "@/assets/img/kertin-fate.webp";
+import ReactGiftExpert from "@/assets/img/react-gift-expert.webp";
+import UrlShortener from "@/assets/img/url-shortener.webp";
 
 export const PROJECTS: Project[] = [
     {
