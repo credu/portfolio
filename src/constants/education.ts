@@ -11,7 +11,7 @@ export const EDUCATION: TimelineInterface[] = [
                 href: "https://drive.google.com/file/d/1Hkg97Ml6UTuBsPtsDEvQaazKpdDyN5qA/view"
             },
             {
-                label: "Read more",
+                label: "Google Site",
                 href: "https://sites.google.com/view/ccidia/inicio"
             }
         ]
@@ -26,7 +26,7 @@ export const EDUCATION: TimelineInterface[] = [
                 href: "https://assets.digitalhouse.com/content/ar/ctd/CTD_PROGRAMA_PDF.pdf"
             },
             {
-                label: "Read more",
+                label: "Certification Site",
                 href: "https://www.digitalhouse.com/mx/productos/programacion/certified-tech-developer"
             }
         ]
