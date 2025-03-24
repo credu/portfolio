@@ -21,6 +21,7 @@ const { title, description } = Astro.props;
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
         <meta name="description" content={description} />
+        <link rel="canonical" href={Astro.url} />
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
