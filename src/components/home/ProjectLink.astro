@@ -4,7 +4,7 @@ import { LOCAL_ICONS, LOCAL_ICONS_NAMES } from "@/constants/icons";
 
 interface Props {
     href: string;
-    type?: ProjectLinksType | string;
+    type?: ProjectLinksType;
 }
 
 const { href, type } = Astro.props;
@@ -15,7 +15,13 @@ const Icon =
         : LOCAL_ICONS.anchor;
 ---
 
-<a class="inline-block" href={href} target="_blank" rel="noopener noreferrer">
+<a
+    class="inline-block"
+    href={href}
+    aria-label={`Anchor to ${type}`}
+    target="_blank"
+    rel="noopener noreferrer"
+>
     <Icon
         class="inline-block fill-gray-800 size-8 transition dark:fill-white"
     />
