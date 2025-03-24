@@ -7,6 +7,8 @@
   --default-font-family: "Roboto", sans-serif; 
 }
 
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
 html {
   scroll-behavior: smooth;
 }

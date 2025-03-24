@@ -1,4 +1,5 @@
 ---
+import ToggleButton from "../buttons/ToggleButton.astro";
 import TraslucentContainer from "../containers/TraslucentContainer.astro";
 
 interface NavigationLinks {
@@ -37,16 +38,16 @@ const navigationLinks: NavigationLinks[] = [
 ---
 
 <header
-    class="container fixed flex items-center justify-center mt-3 mx-auto text-white w-full top-0 left-0 right-0 z-10 px-4"
+    class="container fixed flex items-center justify-center mt-3 mx-auto w-full top-0 left-0 right-0 z-10 px-4"
 >
     <TraslucentContainer class="overflow-x-auto scroll-smooth touch-pan-x">
         <nav class="flex flex-row justify-between">
             <ul class="flex flex-nowrap text-nowrap">
                 {
                     navigationLinks.map(({ title, href, label }) => (
-                        <li class="inline-block">
+                        <li class="block">
                             <a
-                                class="inline-block px-2 py-1 transition-colors duration-300 hover:text-sky-500"
+                                class="inline-block px-2 py-1 text-gray-800 transition-colors duration-300 hover:text-sky-500 dark:text-white"
                                 aria-label={label}
                                 href={href}
                             >
@@ -55,6 +56,9 @@ const navigationLinks: NavigationLinks[] = [
                         </li>
                     ))
                 }
+                <li class="block">
+                    <ToggleButton />
+                </li>
             </ul>
         </nav>
     </TraslucentContainer>
@@ -76,9 +80,9 @@ const navigationLinks: NavigationLinks[] = [
                 navItems.forEach((item) => {
                     const label = item.getAttribute("aria-label");
                     if (label === entry.target.id) {
-                        item.classList.add("text-sky-500");
+                        item.classList.add("!text-sky-500");
                     } else {
-                        item.classList.remove("text-sky-500");
+                        item.classList.remove("!text-sky-500");
                     }
                 });
             }

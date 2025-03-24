@@ -27,8 +27,10 @@ const { title, description, image, tags, links } = Astro.props;
                 loading="lazy"
             />
         </a>
-        <span class="font-medium text-white tracking-wide">{title}</span>
-        <p class="prose prose-invert">{description}</p>
+        <span class="font-medium text-gray-800 tracking-wide dark:text-white"
+            >{title}</span
+        >
+        <p class="prose dark:prose-invert">{description}</p>
         <div class="mt-auto gap-3 flex flex-wrap">
             {tags.map((tag) => <ProjectTag name={tag} />)}
         </div>

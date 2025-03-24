@@ -13,18 +13,18 @@ const { href, label, icon, iconLoading, external } = Astro.props;
 ---
 
 <a
-    class="inline-block border-2 border-white px-2 py-1 rounded-sm hover:bg-white transition-colors duration-300 group"
+    class="inline-block border-2 border-gray-800 px-2 py-1 rounded-sm hover:bg-gray-800 transition-colors duration-300 dark:border-white dark:hover:bg-white group"
     href={href}
     {...external && { target: "_blank", rel: "noopener noreferrer" }}
 >
     <Image
-        class="inline-block invert-100 align-middle group-hover:invert-25 transition duration-300"
+        class="inline-block align-middle group-hover:invert-100 transition duration-300 dark:invert-100 dark:group-hover:invert-25"
         src={icon}
         alt={label}
         loading={iconLoading}
     />
     <span
-        class="align-middle inline-block ml-1 group-hover:text-gray-950 transition-colors duration-300"
+        class="align-middle inline-block ml-1 text-gray-800 group-hover:text-white transition-colors duration-300 dark:text-white dark:group-hover:text-gray-950"
         >{label}</span
     >
 </a>
