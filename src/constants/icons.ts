@@ -1,17 +1,19 @@
-import AnchorIcon from "@/assets/svg/anchor.svg";
-import documentIcon from "@/assets/svg/document.svg";
-import GithubIcon from "@/assets/svg/github.svg";
-import GitlabIcon from "@/assets/svg/gitlab.svg";
-import LinkedinIcon from "@/assets/svg/linkedin.svg";
-import windowIcon from "@/assets/svg/window.svg";
+import { type AstroComponentFactory } from "astro/runtime/server/index.js";
 
-export const LOCAL_ICONS: Record<string, ImageMetadata> = {
+import AnchorIcon from "@/components/icons/AnchorIcon.astro";
+import DocumentIcon from "@/components/icons/DocumentIcon.astro";
+import GithubIcon from "@/components/icons/GithubIcon.astro";
+import GitlabIcon from "@/components/icons/GitlabIcon.astro";
+import LinkedinIcon from "@/components/icons/LinkedinIcon.astro";
+import WindowIcon from "@/components/icons/WindowIcon.astro";
+
+export const LOCAL_ICONS: Record<string, AstroComponentFactory> = {
     anchor: AnchorIcon,
-    deploy: windowIcon,
+    deploy: WindowIcon,
     github: GithubIcon,
     gitlab: GitlabIcon,
     linkedin: LinkedinIcon,
-    document: documentIcon,
+    document: DocumentIcon,
 };
 
 export const ICONS: Record<string, string> = {

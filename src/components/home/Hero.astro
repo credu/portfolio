@@ -24,12 +24,11 @@ import LinkButton from "../buttons/LinkButton.astro";
 
     <div class="space-x-3 space-y-3">
         {
-            SOCIAL_NETWORKS.map(({ href, icon, name }) => (
+            SOCIAL_NETWORKS.map(({ href, Icon, name }) => (
                 <LinkButton
                     href={href}
                     label={name}
-                    icon={icon}
-                    iconLoading="eager"
+                    Icon={Icon}
                     external={true}
                 />
             ))

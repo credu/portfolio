@@ -1,15 +1,14 @@
 ---
-import { Image } from "astro:assets";
+import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 
 interface Props {
     href: string;
     label: string;
-    icon: ImageMetadata;
-    iconLoading?: "eager" | "lazy";
+    Icon: AstroComponentFactory;
     external?: boolean;
 }
 
-const { href, label, icon, iconLoading, external } = Astro.props;
+const { href, label, Icon, external } = Astro.props;
 ---
 
 <a
@@ -17,11 +16,8 @@ const { href, label, icon, iconLoading, external } = Astro.props;
     href={href}
     {...external && { target: "_blank", rel: "noopener noreferrer" }}
 >
-    <Image
-        class="inline-block align-middle group-hover:invert-100 transition duration-300 dark:invert-100 dark:group-hover:invert-25"
-        src={icon}
-        alt={label}
-        loading={iconLoading}
+    <Icon
+        class="inline-block align-middle size-4 fill-gray-800 group-hover:fill-white transition duration-300 dark:fill-white dark:group-hover:fill-gray-800"
     />
     <span
         class="align-middle inline-block ml-1 text-gray-800 group-hover:text-white transition-colors duration-300 dark:text-white dark:group-hover:text-gray-950"

@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import { type ProjectLinksType } from "@/types/Project";
 import { LOCAL_ICONS, LOCAL_ICONS_NAMES } from "@/constants/icons";
 
@@ -10,18 +9,14 @@ interface Props {
 
 const { href, type } = Astro.props;
 
-const icon =
+const Icon =
     type && LOCAL_ICONS_NAMES.includes(type)
         ? LOCAL_ICONS[type]
         : LOCAL_ICONS.anchor;
 ---
 
 <a class="inline-block" href={href} target="_blank" rel="noopener noreferrer">
-    <Image
-        class="inline-block invert-25 size-8 transition dark:invert-100"
-        src={icon}
-        height={64}
-        width={64}
-        alt="link"
+    <Icon
+        class="inline-block fill-gray-800 size-8 transition dark:fill-white"
     />
 </a>

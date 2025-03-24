@@ -5,16 +5,16 @@ export const SOCIAL_NETWORKS: SocialNetwork[] = [
     {
         name: "Github",
         href: "https://github.com/credu",
-        icon: LOCAL_ICONS.github
+        Icon: LOCAL_ICONS.github
     },
     {
         name: "Linkedin",
         href: "https://www.linkedin.com/in/credu/",
-        icon: LOCAL_ICONS.linkedin
+        Icon: LOCAL_ICONS.linkedin
     },
     {
         name: "Resume",
         href: "https://drive.google.com/drive/folders/1aguMbe96FkHrs4S4OvSzVzjXylcNRD66?usp=sharing",
-        icon: LOCAL_ICONS.document
+        Icon: LOCAL_ICONS.document
     },
 ];
