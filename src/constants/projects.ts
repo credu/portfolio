@@ -60,7 +60,7 @@ export const PROJECTS: Project[] = [
     },
     {
         title: "I Can't F*cking Decide Between",
-        description: "Developed with @Gualpy inspirited by JustMissAlex's amazing WebApp that worked util 2023.",
+        description: "Developed with @Gualpy inspirited by JustMissAlex's amazing WebApp that worked until 2023.",
         image: ICantFuckingDecideBetween,
         tags: ["HTML", "TailwindCSS", "JavaScript"],
         links: [
