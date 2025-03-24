@@ -18,8 +18,8 @@ export const ICONS: Record<string, string> = {
     html: "https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg",
     css: "https://www.vectorlogo.zone/logos/w3_css/w3_css-icon~old.svg",
     javascript: "https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg",
-    astro: "https://raw.githubusercontent.com/pheralb/svgl/main/static/library/astro.svg",
-    astro_dark: "https://raw.githubusercontent.com/pheralb/svgl/main/static/library/astro_dark.svg",
+    astro: "https://svgl.app/library/astro.svg",
+    astro_dark: "https://svgl.app/library/astro_dark.svg",
     reactjs: "https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg",
     tailwindcss: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
     java: "https://www.vectorlogo.zone/logos/java/java-icon.svg",
@@ -35,7 +35,7 @@ export const ICONS: Record<string, string> = {
     docker: "https://www.vectorlogo.zone/logos/docker/docker-icon.svg",
     postman: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
     godot: "https://www.vectorlogo.zone/logos/godotengine/godotengine-icon.svg",
-    h2: "https://raw.githubusercontent.com/benc-uk/icon-collection/master/azure-cds/databases-130-SQL-Database.svg"
+    h2: "https://www.svgrepo.com/show/499816/database.svg"
 };
 
 export const ICONS_NAMES = Object.keys(ICONS) as (keyof typeof ICONS)[];;
