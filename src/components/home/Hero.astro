@@ -1,33 +1,35 @@
 ---
 import { SOCIAL_NETWORKS } from "@/constants/social-networks";
 import LinkButton from "../buttons/LinkButton.astro";
+import { type TranslateFunctionType } from "@/i18n/utils";
+
+interface Props {
+    t: TranslateFunctionType;
+}
+
+const { t } = Astro.props;
 ---
 
 <div class="space-y-3">
     <h1
         class="text-5xl font-bold text-gray-800 transition-colors duration-300 dark:text-white"
     >
-        Hey, I'm <span class="text-sky-600">Jesus Mendoza</span>
+        {t("hero.greeting")}
+        <span class="text-sky-600">{t("hero.greeting.name")}</span>
     </h1>
 
     <h2 class="font-bold text-2xl text-sky-300 dark:text-sky-200">
-        Fullstack Developer
+        {t("hero.headline")}
     </h2>
 
-    <p class="prose prose-xl dark:prose-invert">
-        I'm a <b>FullStack Developer</b> with experience in different technologies,
-        focused on developing efficient and scalable solutions. I have experience
-        in <b>backend development</b> with Express, Laravel, and Spring Boot, SQL
-        and NoSQL <b>databases</b>, <b>frontend development</b> with React, and infrastructure
-        implementation with Docker.
-    </p>
+    <p class="prose prose-xl dark:prose-invert" set:html={t("hero.text")} />
 
     <div class="space-x-3 space-y-3">
         {
             SOCIAL_NETWORKS.map(({ href, Icon, name }) => (
                 <LinkButton
                     href={href}
-                    label={name}
+                    label={t(`hero.button.${name}`)}
                     Icon={Icon}
                     external={true}
                 />

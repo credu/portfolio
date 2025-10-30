@@ -6,10 +6,13 @@ import { type Project } from "@/types/Project";
 import ProjectLink from "./ProjectLink.astro";
 import ProjectTag from "./ProjectTag.astro";
 import TraslucentContainer from "../containers/TraslucentContainer.astro";
+import type { Lang } from "@/i18n/utils";
 
-interface Props extends Project {}
+interface Props extends Project {
+    lang: Lang;
+}
 
-const { title, description, image, tags, links } = Astro.props;
+const { title, description, image, tags, links, lang } = Astro.props;
 ---
 
 <TraslucentContainer>
@@ -30,7 +33,7 @@ const { title, description, image, tags, links } = Astro.props;
         <span class="font-medium text-gray-800 tracking-wide dark:text-white"
             >{title}</span
         >
-        <p class="prose dark:prose-invert">{description}</p>
+        <p class="prose dark:prose-invert">{description[lang]}</p>
         <div class="mt-auto gap-3 flex flex-wrap">
             {tags.map((tag) => <ProjectTag name={tag} />)}
         </div>

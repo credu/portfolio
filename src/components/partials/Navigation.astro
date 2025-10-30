@@ -1,6 +1,8 @@
 ---
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import ToggleButton from "../buttons/ToggleButton.astro";
 import TraslucentContainer from "../containers/TraslucentContainer.astro";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 interface NavigationLinks {
     title: string;
@@ -8,31 +10,34 @@ interface NavigationLinks {
     href: string;
 }
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const navigationLinks: NavigationLinks[] = [
     {
-        title: "Home",
+        title: t("nav.home"),
         label: "home",
-        href: "/#",
+        href: getRelativeLocaleUrl(lang) + "#",
     },
     {
-        title: "Projects",
+        title: t("nav.projects"),
         label: "projects",
-        href: "/#projects",
+        href: getRelativeLocaleUrl(lang) + "#projects",
     },
     {
-        title: "Experience",
+        title: t("nav.experience"),
         label: "experience",
-        href: "/#experience",
+        href: getRelativeLocaleUrl(lang) + "#experience",
     },
     {
-        title: "Stacks",
+        title: t("nav.stacks"),
         label: "stacks",
-        href: "/#stacks",
+        href: getRelativeLocaleUrl(lang) + "#stacks",
     },
     {
-        title: "About Me",
+        title: t("nav.about-me"),
         label: "about-me",
-        href: "/#about-me",
+        href: getRelativeLocaleUrl(lang) + "#about-me",
     },
 ];
 ---

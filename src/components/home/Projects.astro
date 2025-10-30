@@ -3,6 +3,13 @@ import { PROJECTS } from "@/constants/projects";
 import ProjectCard from "./ProjectCard.astro";
 
 import "photoswipe/style.css";
+import type { Lang } from "@/i18n/utils";
+
+interface Props {
+    lang: Lang;
+}
+
+const { lang } = Astro.props;
 ---
 
 <div class="grid grid-flow-row-dense md:grid-cols-3 gap-4" id="gallery">
@@ -11,6 +18,7 @@ import "photoswipe/style.css";
             <ProjectCard
                 title={project.title}
                 description={project.description}
+                lang={lang}
                 image={project.image}
                 tags={project.tags}
                 links={project.links}

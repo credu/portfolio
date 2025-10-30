@@ -1,11 +1,18 @@
+import type { Lang } from "@/i18n/utils";
+
+export interface TimelineDateInterface {
+    from: Date;
+    to?: Date;
+}
+
 export interface TimelineButtonInterface {
-    label: string
-    href: string
+    label: string;
+    href: string;
 }
 
 export interface TimelineInterface {
-    date: string
-    title: string
-    description?: string
-    buttons?: TimelineButtonInterface[]
+    date: TimelineDateInterface;
+    title: string;
+    description?: Record<Lang, string>;
+    buttons?: TimelineButtonInterface[];
 }

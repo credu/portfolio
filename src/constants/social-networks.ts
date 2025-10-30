@@ -1,20 +1,20 @@
 import { type SocialNetwork } from "@/types/SocialNetwork";
-import { LOCAL_ICONS } from './icons';
+import { LOCAL_ICONS } from "./icons";
 
 export const SOCIAL_NETWORKS: SocialNetwork[] = [
     {
-        name: "Github",
+        name: "github",
         href: "https://github.com/credu",
-        Icon: LOCAL_ICONS.github
+        Icon: LOCAL_ICONS.github,
     },
     {
-        name: "Linkedin",
+        name: "linkedin",
         href: "https://www.linkedin.com/in/credu/",
-        Icon: LOCAL_ICONS.linkedin
+        Icon: LOCAL_ICONS.linkedin,
     },
     {
-        name: "Resume",
+        name: "resume",
         href: "https://drive.google.com/drive/folders/1aguMbe96FkHrs4S4OvSzVzjXylcNRD66?usp=sharing",
-        Icon: LOCAL_ICONS.document
+        Icon: LOCAL_ICONS.document,
     },
 ];

@@ -1,10 +1,33 @@
 ---
 import type { TimelineInterface } from "@/types/Timeline";
 import TimelineButton from "./TimelineButton.astro";
+import type { Lang } from "@/i18n/utils";
 
-interface Props extends TimelineInterface {}
+interface Props extends TimelineInterface {
+    lang: Lang;
+}
 
-const { title, description, date, buttons } = Astro.props;
+const { title, description, date, buttons, lang } = Astro.props;
+
+const options: Intl.DateTimeFormatOptions = {
+    month: "long",
+    year: "numeric",
+};
+
+const capitalize = (value: string) => {
+    return value.charAt(0).toUpperCase() + value.slice(1);
+};
+
+const formatTimelineDate = (date?: Date) => {
+    if (date) {
+        const dateFormatted = date.toLocaleDateString(lang, options);
+        return capitalize(dateFormatted);
+    }
+    if (lang === "es") {
+        return "Presente";
+    }
+    return "Present";
+};
 ---
 
 <li class="mb-10 ms-4">
@@ -14,15 +37,15 @@ const { title, description, date, buttons } = Astro.props;
     </div>
     <time
         class="mb-1 text-sm font-normal leading-none text-[#55585e] dark:text-gray-500"
-        >{date}</time
+        >{formatTimelineDate(date.from)} — {formatTimelineDate(date.to)}</time
     >
     <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
         {title}
     </h3>
     {
-        description && (
+        description && description[lang] && (
             <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-                {description}
+                {description[lang]}
             </p>
         )
     }

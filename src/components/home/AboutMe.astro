@@ -1,24 +1,14 @@
-<div class="prose prose-xl dark:prose-invert">
-    <p>Hi again, my name is <b>Jesus Mendoza</b>.</p>
+---
+import { type TranslateFunctionType } from "@/i18n/utils";
 
-    <p>
-        I was born on <b>Valentine's Day of 2005</b> in <b>Guayaquil, Ecuador</b
-        >. My mom decided that I would be born on <b>February 14</b>. Literally,
-        the doctor asked her what day do you want to give birth of this week?
-        And she said February 14.
-    </p>
+interface Props {
+    t: TranslateFunctionType;
+}
 
-    <p>My hobbies are:</p>
-    <ul>
-        <li>Play video games.</li>
-        <li>View technology news.</li>
-        <li>Enjoy of cartoons, anime and movies.</li>
-        <li>Coding personal projects.</li>
-        <li>Learn new things.</li>
-    </ul>
-    <p>
-        I haven't seen many movies, I grew watching YouTube, so currently I like
-        to view old movies. For example, I have seen from my list Metal Jacket,
-        Shrek, The Longest Yard, Catch Me If You Can and others.
-    </p>
-</div>
+const { t } = Astro.props;
+---
+
+<div
+    class="prose prose-xl dark:prose-invert"
+    set:html={t("about-me.content")}
+/>

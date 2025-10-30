@@ -10,79 +10,115 @@ import UrlShortener from "@/assets/img/url-shortener.webp";
 export const PROJECTS: Project[] = [
     {
         title: "Carato",
-        description: "The Digital House side project with 8 classmates about a booking system like Airbnb for cars.",
+        description: {
+            en: "The Digital House side project with 8 classmates about a booking system like Airbnb for cars.",
+            es: "Proyecto final de Digital House en colaboracion con 8 compañeros de un booking como Airbnb para alquilar carros.",
+        },
         image: Carato,
-        tags: ["Java", "Spring Boot", "JavaScript", "ReactJS", "MySQL", "Docker"],
+        tags: [
+            "Java",
+            "Spring Boot",
+            "JavaScript",
+            "ReactJS",
+            "MySQL",
+            "Docker",
+        ],
         links: [
             {
                 type: "github",
-                href: "https://github.com/dpaeza/carato-frontend-dh"
+                href: "https://github.com/dpaeza/carato-frontend-dh",
             },
             {
                 type: "gitlab",
-                href: "https://gitlab.com/gian-pc/carato-backend"
+                href: "https://gitlab.com/gian-pc/carato-backend",
             },
             {
                 type: "deploy",
-                href: "https://carato-frontend-dh.vercel.app/"
-            }
-        ]
+                href: "https://carato-frontend-dh.vercel.app/",
+            },
+        ],
     },
     {
         title: "Dr. JISmile",
-        description: "Developed by Ivonne Oña (UI Design) and me (coding). Dr. JISmile is a web application designed to facilitate the management of dental practices.",
+        description: {
+            en: "Developed by Ivonne Oña (UI Design) and me (coding). Dr. JISmile is a web application designed to facilitate the management of dental practices.",
+            es: "Aplicacion web diseñada para facilitar la gestion de los dentistas, desarrollada junto a Ivonne Oña (UI Design).",
+        },
         image: DrJISmile,
-        tags: ["Java", "Spring Boot", "HTML", "JavaScript", "TailwindCSS", "H2"],
+        tags: [
+            "Java",
+            "Spring Boot",
+            "HTML",
+            "JavaScript",
+            "TailwindCSS",
+            "H2",
+        ],
         links: [
             {
-                href: "https://www.figma.com/proto/zlCBgdoFvXBHfW25LnLqch/Odontologo?node-id=77-2499&node-type=frame&t=xxrI0E2XlXME3EkK-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=77%3A2499&hotspot-hints=0"
+                href: "https://www.figma.com/proto/zlCBgdoFvXBHfW25LnLqch/Odontologo?node-id=77-2499&node-type=frame&t=xxrI0E2XlXME3EkK-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=77%3A2499&hotspot-hints=0",
             },
             {
                 type: "github",
-                href: "https://github.com/credu/Proyecto-Integrador-Backend-I"
-            }
-        ]
+                href: "https://github.com/credu/Proyecto-Integrador-Backend-I",
+            },
+        ],
     },
     {
         title: "Url Shortener",
-        description: "Demonstrative project to create short urls based on the attached medium and Midudev's suggestions for portfolio projects.",
+        description: {
+            en: "Demonstrative project to create short urls based on the attached medium and Midudev's suggestions for portfolio projects.",
+            es: "Proyecto demostrativo basado en el medium adjunto con autenticacion mediante Spring Scurity para acortar urls.",
+        },
         image: UrlShortener,
-        tags: ["Java", "Spring Boot", "JavaScript", "ReactJS", "TailwindCSS", "MongoDB"],
+        tags: [
+            "Java",
+            "Spring Boot",
+            "JavaScript",
+            "ReactJS",
+            "TailwindCSS",
+            "MongoDB",
+        ],
         links: [
             {
-                href: "https://medium.com/@sandeep4.verma/system-design-scalable-url-shortener-service-like-tinyurl-106f30f23a82"
+                href: "https://medium.com/@sandeep4.verma/system-design-scalable-url-shortener-service-like-tinyurl-106f30f23a82",
             },
             {
                 type: "github",
-                href: "https://github.com/credu/url-shortener"
-            }
-        ]
+                href: "https://github.com/credu/url-shortener",
+            },
+        ],
     },
     {
         title: "I Can't F*cking Decide Between",
-        description: "Developed with @Gualpy inspirited by JustMissAlex's amazing WebApp that worked until 2023.",
+        description: {
+            en: "Developed with @Gualpy inspirited by JustMissAlex's amazing WebApp that worked until 2023.",
+            es: "Desarrollado junto a @Gualpy inspirado en la increible aplicacion de JustMissAlex",
+        },
         image: ICantFuckingDecideBetween,
         tags: ["HTML", "TailwindCSS", "JavaScript"],
         links: [
             {
-                href: "https://web.archive.org/web/20230319114147/https://icantfuckingdecide.com/"
+                href: "https://web.archive.org/web/20230319114147/https://icantfuckingdecide.com/",
             },
             {
-                href: "https://medium.com/@justmissalex/i-can-t-fucking-decide-the-dumbest-most-effective-solution-to-your-indecisiveness-293158969af0"
+                href: "https://medium.com/@justmissalex/i-can-t-fucking-decide-the-dumbest-most-effective-solution-to-your-indecisiveness-293158969af0",
             },
             {
                 type: "github",
-                href: "https://github.com/credu/I-Cant-Fucking-Decide-Comeback"
+                href: "https://github.com/credu/I-Cant-Fucking-Decide-Comeback",
             },
             {
                 type: "deploy",
-                href: "https://credu.github.io/I-Cant-Fucking-Decide-Comeback/"
-            }
-        ]
+                href: "https://credu.github.io/I-Cant-Fucking-Decide-Comeback/",
+            },
+        ],
     },
     {
         title: "React Gift Expert",
-        description: "A react app that serves gifts consuming Gilphy app developed on React Devtalles's course with some modifications.",
+        description: {
+            en: "A react app that serves gifts consuming Gilphy app developed on React Devtalles's course with some modifications.",
+            es: "Muestra los gifs mas populares segun la busqueda mediante la “Gilphy SDK”",
+        },
         image: ReactGiftExpert,
         tags: ["ReactJS", "JavaScript", "CSS"],
         links: [
@@ -94,17 +130,20 @@ export const PROJECTS: Project[] = [
                 type: "deploy",
                 href: "https://credu.github.io/react-gift-expert/",
             },
-        ]
+        ],
     },
     {
         title: "Kertin's Fate",
-        description: "I participated in the development of the videogame Kertin's Fate using the Godot videogame engine with Fausto Zamora and his friend Pato.",
+        description: {
+            en: "I participated in the development of the videogame Kertin's Fate using the Godot videogame engine with Fausto Zamora and his friend Pato.",
+            es: "Mi primer videojuego “Kertin's Fate” realizado con 15 años usando el motor de videojuegos Godot junto a Fausto Zamora y su amigo Pato.",
+        },
         image: KertinFate,
         tags: ["Godot"],
         links: [
             {
-                href: "https://fizagameengines.blogspot.com/2020/06/kerstins-fate-developer-diary.html"
-            }
-        ]
-    }
-]
+                href: "https://fizagameengines.blogspot.com/2020/06/kerstins-fate-developer-diary.html",
+            },
+        ],
+    },
+];

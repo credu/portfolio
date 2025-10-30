@@ -6,6 +6,7 @@ import Navigation from "@/components/partials/Navigation.astro";
 import "@/styles/global.css";
 
 interface Props {
+    lang: string;
     title: string;
     description: string;
 }
@@ -13,11 +14,11 @@ interface Props {
 const url = Astro.url;
 const imageUrl = new URL("/og.jpg", url);
 
-const { title, description } = Astro.props;
+const { title, description, lang } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
