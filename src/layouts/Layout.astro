@@ -4,6 +4,7 @@ import Footer from "@/components/partials/Footer.astro";
 import Navigation from "@/components/partials/Navigation.astro";
 
 import "@/styles/global.css";
+import { defaultLang } from "@/i18n/ui";
 
 interface Props {
     lang: string;
@@ -12,9 +13,11 @@ interface Props {
 }
 
 const url = Astro.url;
-const imageUrl = new URL("/og.jpg", url);
+const imageUrl = new URL("/og.jpg", url.origin);
 
 const { title, description, lang } = Astro.props;
+const canonicalUrl =
+    lang === defaultLang ? url.href : url.href.replace(`/${lang}`, "/");
 ---
 
 <!doctype html>
@@ -23,7 +26,7 @@ const { title, description, lang } = Astro.props;
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
         <title>{title}</title>
-        <link rel="canonical" href={url} />
+        <link rel="canonical" href={canonicalUrl} />
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
