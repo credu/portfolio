@@ -5,9 +5,11 @@ import Navigation from "@/components/partials/Navigation.astro";
 
 import "@/styles/global.css";
 import { defaultLang } from "@/i18n/ui";
+import type { Lang, TranslateFunctionType } from "@/i18n/utils";
 
 interface Props {
-    lang: string;
+    lang: Lang;
+    t: TranslateFunctionType;
     title: string;
     description: string;
 }
@@ -15,7 +17,7 @@ interface Props {
 const url = Astro.url;
 const imageUrl = new URL("/og.jpg", url.origin);
 
-const { title, description, lang } = Astro.props;
+const { title, description, lang, t } = Astro.props;
 const canonicalUrl =
     lang === defaultLang ? url.href : url.href.replace(`/${lang}`, "/");
 ---
@@ -63,7 +65,7 @@ const canonicalUrl =
             </div>
         </div>
 
-        <Navigation />
+        <Navigation lang={lang} t={t} />
         <slot />
         <Footer />
         <Analytics />

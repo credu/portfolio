@@ -1,9 +1,9 @@
 ---
-import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import ToggleButton from "../buttons/ToggleButton.astro";
 import TraslucentContainer from "../containers/TraslucentContainer.astro";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import ToggleLanguage from "../buttons/ToggleLanguage.astro";
+import type { Lang, TranslateFunctionType } from "@/i18n/utils";
 
 interface NavigationLinks {
     title: string;
@@ -11,8 +11,12 @@ interface NavigationLinks {
     href: string;
 }
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+interface Props {
+    lang: Lang;
+    t: TranslateFunctionType;
+}
+
+const { lang, t } = Astro.props;
 
 const navigationLinks: NavigationLinks[] = [
     {
