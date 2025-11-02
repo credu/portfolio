@@ -1,7 +1,7 @@
-import type { AstroComponentFactory } from "astro/runtime/server/index.js";
+import type { SvgComponent } from "astro/types";
 
 export interface SocialNetwork {
-    name: string
-    href: string
-    Icon: AstroComponentFactory
+    name: string;
+    href: string;
+    Icon: SvgComponent;
 }

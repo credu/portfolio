@@ -1,10 +1,10 @@
 ---
-import type { AstroComponentFactory } from "astro/runtime/server/index.js";
+import type { SvgComponent } from "astro/types";
 
 interface Props {
     href: string;
     label: string;
-    Icon: AstroComponentFactory;
+    Icon: SvgComponent;
     external?: boolean;
 }
 
