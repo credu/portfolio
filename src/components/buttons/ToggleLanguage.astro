@@ -1,0 +1,30 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import EcuadorFlag from "@/assets/svg/flag-ecuador.svg";
+import USFlag from "@/assets/svg/flag-us.svg";
+import type { Lang } from "@/i18n/utils";
+
+interface Props {
+    lang: Lang;
+}
+
+const { lang } = Astro.props;
+---
+
+{
+    lang === "en" ? (
+        <a
+            aria-label="Cambiar idioma a español"
+            href={getRelativeLocaleUrl("es")}
+        >
+            <USFlag height="54" width="54" />
+        </a>
+    ) : (
+        <a
+            aria-label="Change language to English"
+            href={getRelativeLocaleUrl("en")}
+        >
+            <EcuadorFlag height="54" width="54" />
+        </a>
+    )
+}
