@@ -12,6 +12,9 @@ export const ui = {
         "nav.experience": "Experience",
         "nav.stacks": "Stacks",
         "nav.about-me": "About Me",
+        "home.meta.title": "Portfolio | Jesus Mendoza",
+        "home.meta.description":
+            "Passionate FullStack Developer with expertise in backend, frontend, and DevOps. Skilled in JavaScript, React, Express, Java, Spring Boot, SQL, NoSQL and Docker.",
         "hero.greeting": "Hi, I'm",
         "hero.greeting.name": "Jesus Mendoza",
         "hero.headline": "Fullstack Developer",
@@ -55,6 +58,9 @@ export const ui = {
         "nav.projects": "Proyectos",
         "nav.experience": "Experiencia",
         "nav.about-me": "Sobre mi",
+        "home.meta.title": "Portafolio | Jesus Mendoza",
+        "home.meta.description":
+            "FullStack Developer con experiencia en backend, frontend y DevOps. Especializado en JavaScript, React, Express, Java, Spring Boot, SQL, NoSQL y Docker.",
         "hero.greeting": "Hola, soy",
         "hero.text": `
             <b>Desarrollador FullStack</b> con experiencia en diversas tecnologias,
